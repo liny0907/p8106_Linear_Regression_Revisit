@@ -1,16 +1,8 @@
----
-title: "Linear Regression: A Revisit" 
-author: "Lin Yang"
-output: github_document
---- 
+Linear Regression: A Revisit
+================
+Lin Yang
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, results = 'asis')
-```
-
-\newpage
-
-```{r}
+``` r
 library(RNHANES)
 library(tidyverse)
 library(summarytools)
@@ -19,9 +11,13 @@ library(leaps)
 
 # Data
 
-In this example, we assess the association between high density lipoprotein (HDL) cholesterol and body mass index, blood pressure, and other demographic factors (age, gender, race) using the NHANES data (https://wwwn.cdc.gov/nchs/nhanes/ContinuousNhanes/Default.aspx?BeginYear=2001). The data can be downloaded using functions in the package `RNHANES`.
+In this example, we assess the association between high density
+lipoprotein (HDL) cholesterol and body mass index, blood pressure, and
+other demographic factors (age, gender, race) using the NHANES data
+(<https://wwwn.cdc.gov/nchs/nhanes/ContinuousNhanes/Default.aspx?BeginYear=2001>).
+The data can be downloaded using functions in the package `RNHANES`.
 
-```{r}
+``` r
 dat <- nhanes_load_data(file_name = "l13_B", year = "2001-2002")
 
 dat = dat %>% 
@@ -39,7 +35,3 @@ dat <- na.omit(dat)
 ```
 
 Summary statistics of the predictors and the response:
-
-
-
-
