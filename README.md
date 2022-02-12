@@ -1,1 +1,1 @@
-# p8106_Linear_Regression_Revisit
+This is the repository for Linear Regression: A Revisit
